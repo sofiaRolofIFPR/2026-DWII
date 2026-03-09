@@ -10,7 +10,8 @@
 //Variaveis
 $nome = "Sofia Roloff";
 $curso = "Técnico em informatica - IFPR";
-$ano = "2026";
+$Profission = "Futura formanda em Técnico em Informatica pelo Instituto Federal do Paraná - CRPG.";
+$pagina_atual = "inicio";
 ?>
 
 <!DOCTYPE html>
@@ -20,19 +21,29 @@ $ano = "2026";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - <?php echo $nome; ?></title>
     <style>
-        body {font-family: Arial, sans-serif; margin: 0;background: #f3f4f6;}
-        nav {background: #3b579d; padding: 15px 30px;}
-        nav a {color: white; text-decoration: none; margin-ringht:20px; font-weight: bold;}
+        body {font-family: Arial, sans-serif; margin: 0;background: #ffffff;}
+        nav {background: #7132a4; padding: 15px 30px;}
+        nav a {color: white ; text-decoration: none; margin-ringht:20px; font-weight: bold;}
         nav a:hover { text-decoration: underline;}
-        .hero {backgroud: linear-gradient(135deg, #3b579d, #2a4080); color: white; text-align: center; padding: 60px 20px;}        
+        .hero {backgroud: linear-gradient(135deg, #8f4ac4, #9138c4); color: #4b1679; text-align: center; padding: 60px 20px;}        
         .hero h1{font-size: 2.5em; margin-bottom:10px;}
         .hero p {font-size: 1.2em; opacity:0.9;}
-        .container {max-width: 800px; margin: 40px auto; padding: 20px}
+        .container {max-width: 800px; margin: 40px auto; padding: 20px;}
+        footer { background: #010000; color: #6b7280; text-align: center; padding: 20px; margin-top: 60px; font-size: 14px;}
+        </style>
 </head>
 <body>
-    <h1> Olá, olá! Meu nome é <?php echo $nome; ?></h1>
-    <p>Curso: <?php echo $curso; ?></p>
-    <p>Ano: <?php echo $ano; ?></p>
-    <p>Página gerada em: <?php echo date("d/m/y \à\s H:i"); ?></p>
+   <?php include 'includes/cabecalho.php'; ?>
+
+<div class="hero">
+    <h1><?php echo $nome; ?></h1>
+    <p><?php echo $profission; ?> | <?php echo $curso; ?></P>
+</div>
+<div class="container">
+    <h2>Bem-vind@ ao meu portifólio</h2>
+    <p>Esta página foi gerada pelo PHP em: <strong><?php echo date("d/m/y \à\s H:i:s"); ?></strong></p>
+</div>
+
+<?php include 'includes/rodape.php'; ?>
 </body>
 </html>
